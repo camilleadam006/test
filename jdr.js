@@ -41,7 +41,7 @@ Joueur.initJoueur = function (nom, sante, force) {
 // Renvoie la description du joueur
 Joueur.decrire = function () {
     var description = this.nom + " a " + this.sante + " points de vie, " +
-        this.force + " en force, " + this.xp + " points d'expérience, " +
+        this.force + " en force, " + this.xp + " points d'expériences, " +
         this.inventaire.or + " pièces d'or et " + this.inventaire.cles + " clé(s)";
     return description;
 };
@@ -50,7 +50,7 @@ Joueur.combattre = function (adversaire) {
     this.attaquer(adversaire);
     if (adversaire.sante === 0) {
         console.log(this.nom + " a tué " + adversaire.nom + " et gagne " +
-            adversaire.valeur + " points d'expérience, ainsi que " +
+            adversaire.valeur + " points d'expériences, ainsi que " +
             adversaire.inventaire.or + " pièces d'or et " +
             adversaire.inventaire.cles + " clé(s)");
         this.xp += adversaire.valeur;
